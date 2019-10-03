@@ -1,0 +1,15 @@
+.form
+  = form_with model:@product, url:products_path ,local:true do |f|
+    .form_box
+      = f.text_field :title
+    .form_box
+      = f.text_field :description
+    .form_box
+      = f.file_field :image
+    .form_box
+      = f.text_field :product_url
+    .form_box
+      = f.text_field :language
+    .form_box
+      = f.text_field :term
+      = f.submit "ポスト"
