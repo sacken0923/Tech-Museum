@@ -1,0 +1,36 @@
+.navbar-brand{
+  height: 60px;
+  font-size: 50px;
+  margin-top: 8px;
+  margin-left: 12px;
+}
+.navbar-form {
+  // .form-control {
+  //   width: 1000px;
+  // }
+}
+.form-control {
+  width: 450px;
+  
+}
+.aaa{
+  display:flex;
+  width: 300px;
+  margin-top: 20px;
+}
+.form-group{
+  width: 800px;
+  display:flex;
+  margin-top: 10px;
+  padding-left: 16px;
+  &__right{
+    float: right;
+    justify-content: space-between;
+  }
+}
+
+.form-group__right {
+  a, .header-log-in:hover {
+    text-decoration: none;
+  }
+}

@@ -1,4 +1,9 @@
-%h1 login
-%p ↓↓↓↓↓↓↓
-= link_to "ユーザー登録はこちら", new_user_registration_path
-= link_to "ログアウト", destroy_user_session_path, method: "delete"
+.aaa 
+  - @products.each do |product|
+    .aaa
+      = product.title
+    .ddd
+      .bbb
+        = image_tag "#{product.image}" ,width:"200px",height:"200px"
+      .ccc
+        = image_tag "#{product.image}" ,width:"200px",height:"200px"
