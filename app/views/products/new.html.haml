@@ -1,15 +1,21 @@
-.form
-  = form_with model:@product, url:products_path ,local:true do |f|
-    .form_box
-      = f.text_field :title
-    .form_box
-      = f.text_field :description
-    .form_box
-      = f.file_field :image
-    .form_box
-      = f.text_field :product_url
-    .form_box
-      = f.text_field :language
-    .form_box
-      = f.text_field :term
-      = f.submit "ポスト"
+.post-field
+  .post-main
+    .post-top  作品の情報を入力してください
+    = form_with model:@product, url:products_path ,local:true do |f|
+      .post-box
+        = f.text_field :title, placeholder: "タイトル"
+      .post-box
+        = f.text_field :description, placeholder: "詳細"
+      %label.post-box__image
+        -# = fa_icon "file-image-o", class: "post-box__gazo"
+        画像を選択して下さい
+        = f.file_field :image, placeholder: "画像を選択して下さい", style: "display:none"
+      .post-box
+        = f.text_field :language, placeholder: "使用した言語、フレームワーク"
+      .post-box
+        = f.text_field :term, placeholder: "制作期間"
+      .post-box
+        = f.text_field :product_url, placeholder: "アプリのリンク先URL"
+      .post-box
+        = f.submit "投稿"
+

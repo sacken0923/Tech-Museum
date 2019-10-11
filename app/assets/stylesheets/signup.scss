@@ -1,5 +1,72 @@
-.saku_box{
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.sign-head{
+	text-align: center;
+	margin-top: 80px;
+	}
+
+.field_main{
+	display: grid;
+	margin: 0 auto;
 }
+
+.signup-box{
+	position: relative;
+	margin: 20px 3%;
+	text-align: center;
+	
+	
+
+		// .user-list{
+		// 	font: 15px/24px sans-serif;
+		// 	box-sizing: border-box;
+		// 	width: 100%;
+		// 	margin: 8px 0;
+		// 	padding: 0.3em;
+		// 	transition: 0.3s;
+		// 	border: 1px solid #1b2538;
+		// 	border-radius: 4px;
+		// 	outline: none;
+		// 	padding-left: 40px;
+		// }
+		// .signup-icon{
+		// position: absolute;
+		// top: 0;
+		// left: 44.4%;
+		// padding: 9px 8px;
+		// transition: 0.3s;
+		// color: black;
+		// }
+	}
+	.actions{
+		text-align: center;
+		margin-top: 15px;
+		.button{
+			background-color:lightsteelblue;
+			color: white;
+			width: 200px;
+			height: 30px;
+		}
+	}
+
+.signup-icon {
+	background-color:navy;
+	color:white;
+	padding:10px;
+
+}
+
+input[type="file"] {
+	display: inline-block;
+}
+
+input{
+	width: 230px;
+	height: 35px;
+}
+
+#user_profile{
+	margin: 0px; width: 234px; height: 76px;
+	vertical-align: top;
+}
+
+
+

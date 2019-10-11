@@ -1,9 +1,56 @@
-.aaa 
-  - @products.each do |product|
-    .aaa
-      = product.title
-    .ddd
-      .bbb
-        = image_tag "#{product.image}" ,width:"200px",height:"200px"
-      .ccc
-        = image_tag "#{product.image}" ,width:"200px",height:"200px"
+.top__banner
+  #carousel1.carousel.slide{"data-ride" => "carousel"}
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#carousel1"}
+      %li{"data-slide-to" => "1", "data-target" => "#carousel1"}
+      -# %li{"data-slide-to" => "2", "data-target" => "#carousel1"}
+    .carousel-inner{:role => "listbox"}
+      .item.active
+        %img{:alt => "", :src => "https://i.gyazo.com/a6183b127a8443039ae3b90cec96e239.jpg"}
+        .carousel-caption
+          %h1.top-main__title What is Tech-Museum?
+          %p.top-main__subtitle 実務経験のないエンジニアの作品(webアプリ)を閲覧することができます。
+          %p.top-main__subtitle また、自分の作品を投稿することも可能です。
+      .item
+        %img{:alt => "", :src => "https://i.gyazo.com/372fe92e4a7d2123f1fd321388ec7715.jpg"}
+        .carousel-caption
+          %h1.top-main__title Have a good time at Tech-Museum!
+          %p.top-main__subtitle 気にいった作品には「いいね」を押して、
+          %p.top-main__subtitle 未来のエンジニア仲間を応援してあげてくださいね。
+      -# .item
+      -#   %img{:alt => "", :src => "https://i.gyazo.com/372fe92e4a7d2123f1fd321388ec7715.jpg"}
+      -#   .carousel-caption
+      -#     %h1.top-main__3 Have a good time at 
+      -#     %h5.top-main__3 Tech-Museum!
+      -#     %p  気に入った作品があれば、そっと「いいね」を押して、未来のエンジニア仲間を応援してあげましょう。
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel1", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel1", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+  -# 未経験エンジニアの
+  -# %br
+  -# 未経験エンジニアによる
+  -# %br
+  -# 未経験エンジニアのためのアプリ
+  -# %br
+  -# ～application of the inexperienced engineers, by the  inexperienced engineers, for the  inexperienced engineers～
+  .top-ranking
+    - @lankings.each_with_index do |product, i|
+      .top-products__box
+        = "注目度No.#{i + 1}"
+        .top-products__box
+          = image_tag "#{product.image}" ,width:"200px",height:"200px"
+        %div.top-products__under
+          = product.title
+  .top-products
+    -# .top__main__title
+    -#   新着アイテム
+    -# .top__main__box
+    - @products.each do |product|
+      =link_to product_path(product) do
+        .top-products__box
+          = image_tag "#{product.image}" ,width:"200px",height:"200px"
+          %div.top-products__under
+            = product.title
+          -# .ccc
+          -#   = image_tag "#{product.image}" ,width:"200px",height:"200px"

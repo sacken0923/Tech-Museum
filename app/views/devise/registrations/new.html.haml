@@ -1,33 +1,34 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :profile
-    %br/
-    = f.text_area :profile
-  .field
-    = f.label :icon
-    %br/
-    = f.file_field :icon
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.signup-field
+  %h2.sign-head 新規会員登録
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field_main
+      .signup-box
+        -# .aa
+        -#   .aaa 名前　
+        -#   .bbb 必須
+        = fa_icon "user",class:"signup-icon"
+        = f.text_field :nickname, placeholder: "ニックネーム"
+      .signup-box
+        = fa_icon "envelope",class:"signup-icon"
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+      .signup-box
+        - if @minimum_password_length
+          -# %em
+          -#   (#{@minimum_password_length} characters minimum)
+        = fa_icon "key",class:"signup-icon"
+        = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード"
+        
+      .signup-box
+        = fa_icon "key",class:"signup-icon"
+        = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード(再確認)"
+      .signup-box
+        = fa_icon "pencil-square-o",class:"signup-icon"
+        = f.text_area :profile, placeholder: "プロフィール (例) 先月から学習をスタートしました！Rubyを勉強中です！"
+      .signup-box
+        = fa_icon "user-circle",class:"signup-icon"
+        = f.file_field :icon, placeholder: "ユーザー画像"
+      .actions
+        = f.submit "登録"
+
+

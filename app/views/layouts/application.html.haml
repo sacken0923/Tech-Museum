@@ -13,21 +13,27 @@
         .container-fluid
           = link_to root_path do
             %h1.navbar-brand Tech-Museum
-          .aaa
-            = form.text_field(:search, class: "form-control", placeholder: "searching Products")
-            %button.btn.btn-default{type: "submit"} Search
-          - if user_signed_in?
-            .form-group__right
-              = link_to new_product_path do
-                %button.btn.btn-default.navbar-btn{type: "button"} Post
-              = link_to destroy_user_session_path, method: :delete do
-                %button.btn.btn-default.navbar-btn{type: "button"} mypage
-              = link_to destroy_user_session_path, method: :delete do
-                %button.btn.btn-default.navbar-btn{type: "button"} ログアウト
-          - else
-            .form-group__right
-              = link_to new_user_registration_path, class: 'header-log-in' do
-                %button.btn.btn-default.navbar-btn{type: "button"} Sign Up
-              = link_to new_user_session_path, class: 'header-log-in' do
-                %button.btn.btn-default.navbar-btn{type: "button"} Login
+          .container-fluid__top
+            .search-field
+              = form.text_field(:search, class: "form-control", placeholder: "searching Products")
+              %button.btn.btn-default.btn-search{type: "submit"} 探す
+            .form-group
+              - if user_signed_in?
+                .form-group__right
+                  = link_to new_product_path do
+                    %button.btn.btn-default.navbar-btn{type: "button"} 投稿する
+                  = link_to edit_user_registration_path(current_user) do
+                    %button.btn.btn-default.navbar-btn{type: "button"} マイページ
+                  = link_to destroy_user_session_path, method: :delete do
+                    %button.btn.btn-default.navbar-btn{type: "button"} ログアウト
+              - else
+                .form-group__right
+                  = link_to new_user_registration_path, class: 'header-log-in' do
+                    %button.btn.btn-default.navbar-btn{type: "button"} 新規会員登録
+                  = link_to new_user_session_path, class: 'header-log-in' do
+                    %button.btn.btn-default.navbar-btn{type: "button"} ログイン
     = yield
+    .footer-wrapper
+      .footer-field
+      %footer
+        %p &copy; Tech-Museum

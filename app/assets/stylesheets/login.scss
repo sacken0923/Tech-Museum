@@ -1,0 +1,51 @@
+.login-field{
+
+}
+.login-head{
+  text-align: center;
+  margin-top: 100px;
+	}
+
+.field_main{
+	display: grid;
+	margin: 0 auto;
+}
+
+.field{
+	position: relative;
+	margin: 20px 3%;
+	text-align: center;
+	}
+	.actions{
+		text-align: center;
+		.button{
+			background-color:lightsteelblue;
+			color: white;
+			width: 200px;
+			height: 30px;
+		}
+	}
+
+.login-icon {
+	background-color:navy;
+	color:white;
+	padding:10px;
+
+}
+
+input[type="file"] {
+	display: inline-block;
+}
+
+input{
+	width: 230px;
+	height: 35px;
+}
+
+#user_profile{
+	margin: 0px; width: 234px; height: 76px;
+	vertical-align: top;
+}
+
+
+

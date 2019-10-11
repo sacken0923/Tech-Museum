@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all.limit(4).order(id: "DESC")
+    @products = Product.all.order(id: "DESC")
+    @lankings = Product.all.limit(3).order(id: "DESC")
   end
 
   def new
@@ -16,8 +17,15 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
   private
   def product_params
     params.require(:product).permit(:title, :description, :image, :product_url, :language, :term).merge(user_id: current_user.id)
   end
+  # def move_to_index
+  #   redirect_to action: :index unless user_signed_in?
+  # end
 end

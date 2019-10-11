@@ -73,3 +73,5 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'jquery-rails'
+gem "font-awesome-rails"
