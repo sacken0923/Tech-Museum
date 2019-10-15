@@ -1,0 +1,41 @@
+// .detail{
+//   background-color:green;
+//   padding-top: 40px;
+//   &__field{
+//     box-sizing: border-box;
+//     background-color: #fff;
+//     width: 700px;
+//     margin: 0 auto;
+//     padding: 24px 40px 40px;
+//     &__user{
+//       line-height: 2;
+//       text-align: center;
+//       font-size: 24px;
+//       font-weight: bold;
+//     }
+// }
+// }
+
+.detail{
+  background-color: #eee;
+  padding-top: 40px;
+  &__box{
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 700px;
+    margin: 0 auto;
+    padding: 24px 40px 40px;
+    &__title{
+      line-height: 2;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    &__list{
+      display: flex;
+      .detail-main-image{
+        display: flex;
+      }
+    }
+  }
+}
