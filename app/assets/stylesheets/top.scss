@@ -2,6 +2,7 @@
   width: 100%;
   height: auto;
   padding-top: 20px;
+  background-color: #F5F5F5;
 }
 
 #carousel1 {
@@ -71,6 +72,9 @@
   margin: 0 30px;
   margin-top: 50px;
   flex-wrap: wrap;
+  // &__box{
+  //   border-top: red solid 1px; 
+  // }
 }
 
 .top-products__under{
@@ -79,6 +83,12 @@
   // box-sizing: border-box;
   // text-align: left;
   height: 60px;
-  border: #ccc solid 1px;
+  // border: #ccc solid 1px;
   margin-bottom: 80px;
+  background-color: #fff;
+}
+
+img.image-box {
+  width: 200px;
+  height: 200px;
 }

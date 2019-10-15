@@ -38,19 +38,15 @@
     - @lankings.each_with_index do |product, i|
       .top-products__box
         = "注目度No.#{i + 1}"
-        .top-products__box
-          = image_tag "#{product.image}" ,width:"200px",height:"200px"
-        %div.top-products__under
-          = product.title
+        =link_to product_path(product) do
+          .top-products__box
+            = image_tag "#{product.image}" ,width:"200px",height:"200px"
+          %div.top-products__under
+            = product.title
   .top-products
-    -# .top__main__title
-    -#   新着アイテム
-    -# .top__main__box
     - @products.each do |product|
       =link_to product_path(product) do
         .top-products__box
           = image_tag "#{product.image}" ,width:"200px",height:"200px"
           %div.top-products__under
             = product.title
-          -# .ccc
-          -#   = image_tag "#{product.image}" ,width:"200px",height:"200px"

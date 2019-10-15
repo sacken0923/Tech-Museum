@@ -1,10 +1,12 @@
 .detail
   .detail__box
-    .detail__box__title
+    .detail__box__icon
+      = image_tag "#{@user.icon}", size: "100", class: "detail-main-image"
+    .detail__box__nickname
       = @user.nickname
-    .detail__box__list
-      .detail-image-box
-        = image_tag "#{@user.icon}", size: "300", class: "detail-main-image"
+      .detail__box__title
+      .detail__box__list
+        .detail-image-box
 
 
 -# .detail

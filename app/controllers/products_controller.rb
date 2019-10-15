@@ -22,6 +22,14 @@ class ProductsController < ApplicationController
     @user = User.find(@product.user_id)
   end
 
+  def search
+    @products = Product.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
   def product_params
     params.require(:product).permit(:title, :description, :image, :product_url, :language, :term).merge(user_id: current_user.id)
