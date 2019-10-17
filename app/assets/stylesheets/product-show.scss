@@ -1,26 +1,70 @@
-.detail{
-  background-color: #eee;
-  padding-top: 40px;
-  &__box{
-    box-sizing: border-box;
-    background-color: #fff;
-    width: 700px;
-    margin: 0 auto;
-    padding: 24px 40px 40px;
-    &__title{
-      line-height: 2;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    &__list{
-      display: flex;
-      .detail-main-image{
-        display: flex;
-      }
-    }
-  }
-}
 img.detail-main-image{
   border-radius: 50%;
 }
+
+.detail{
+  background-color: #eee;
+  padding-top: 40px;
+  width: 100%;
+  height: 100vh;
+.detail-container{
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
+  padding: 24px 40px 40px;
+  border: #ddd solid 1px;
+}
+.detail-top{
+  display: flex;
+  line-height: 50px;
+  justify-content: space-between;
+  &__nickname{
+    margin-left: 10px;
+  }
+  &__term{
+    margin-left: auto;
+  }
+}
+.detail-title{
+  font-size: 40px;
+  font-weight: bold;
+  color: #00838f;
+  text-align: center;
+  margin: 20px;
+}
+.detail-image{
+  max-width: 500px;
+  margin: 0 auto;
+  img{
+    display: block;
+    width: 500px;
+    height: 400px;
+  }
+}
+.detail-description{
+  font-size: 18px;
+  margin-top: 20px;
+}
+.detail-link{
+  margin-top: 40px;
+  text-align: center;
+}
+.detail-button {
+  border: aqua solid 1px;
+  color: aqua;
+  border-radius: 30px;
+  width: 400px;
+  padding: 10px 15px;
+  text-decoration: none;
+  &:hover{
+  background-color: aqua;
+  color: #fff;
+  }
+}
+.detail-language{
+  margin-top: 30px;
+}
+
+}
+
