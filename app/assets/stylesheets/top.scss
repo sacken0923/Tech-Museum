@@ -68,7 +68,8 @@
 }
 .top-products{
   display: flex;
-  justify-content: space-between;
+  
+  // justify-content: space-between;
   margin: 0 30px;
   margin-top: 50px;
   flex-wrap: wrap;
@@ -91,4 +92,19 @@
 img.image-box {
   width: 200px;
   height: 200px;
+}
+
+.top-room:hover{
+  animation: float 0.2s linear both; 
+  @keyframes float {
+    0% {transform: translateY(0)}
+    100% {
+      transform: translateY(-5px);
+      box-shadow: 3px 3px 3px orange;}
+  }
+}
+
+.top-products__box{
+  margin-top: 10px;
+  margin-left: 20px;
 }

@@ -1,18 +1,29 @@
 .detail
-  .detail__box
-    .detail__box__icon
-      = image_tag "#{@user.icon}", size: "100", class: "detail-main-image"
-    .detail__box__nickname
-      = @user.nickname
-      .detail__box__title
-      .detail__box__list
-        .detail-image-box
+  .detail-container
+    .detail-top
+      .detail-top__icon
+        = image_tag "#{@user.icon}", size: "50", class: "detail-icon"
+      .detail-top__nickname
+        = link_to "#{@user.nickname}"
+      .detail-top__term
+        制作期間 : 
+        = @product.term
+    .detail-title
+      = @product.title
+    .detail-image
+      = image_tag "#{@product.image}"
+    .detail-description
+      = @product.description
+    .detail-link
+      = link_to "#{@product.product_url}", target: :_blank , class:"detail-button" do
+        プロジェクトページを見てみる！
+    .detail-language
+      使用言語 : 
+      = @product.language
+  .detail-comment
+    
+  
 
 
--# .detail
--#   .detail__field
--#     .detail__field__user
--#       = @user.nickname
--#     .detail__field__list
--#       .detail-image-box
--#         = image_tag "#{@user.icon}", size: "300", class: "detail-main-image"
+
+

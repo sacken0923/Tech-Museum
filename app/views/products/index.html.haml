@@ -39,14 +39,16 @@
       .top-products__box
         = "注目度No.#{i + 1}"
         =link_to product_path(product) do
-          .top-products__box
-            = image_tag "#{product.image}" ,width:"200px",height:"200px"
-          %div.top-products__under
-            = product.title
+          .top-room
+            .top-products__box
+              = image_tag "#{product.image}" ,width:"200px",height:"200px"
+            %div.top-products__under
+              = product.title
   .top-products
     - @products.each do |product|
       =link_to product_path(product) do
-        .top-products__box
-          = image_tag "#{product.image}" ,width:"200px",height:"200px"
-          %div.top-products__under
-            = product.title
+        .top-room
+          .top-products__box
+            = image_tag "#{product.image}" ,width:"200px",height:"200px"
+            %div.top-products__under
+              = product.title
