@@ -20,10 +20,10 @@
     .detail-language
       使用言語 : 
       = @product.language
-  .detail-comment
     
-  
-
-
-
-
+    .detail-comment
+      = form_with url: product_comments_path(:product_id) do |f|
+        .detail-comment__count
+          コメント数()
+        .detail-comment__main
+          aaaa

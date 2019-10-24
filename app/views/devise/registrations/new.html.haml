@@ -8,10 +8,10 @@
         -#   .aaa 名前　
         -#   .bbb 必須
         = fa_icon "user",class:"signup-icon"
-        = f.text_field :nickname, placeholder: "ニックネーム"
+        = f.text_field :nickname, autofocus: true, placeholder: "ニックネーム"
       .signup-box
         = fa_icon "envelope",class:"signup-icon"
-        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+        = f.email_field :email, autocomplete: "email", placeholder: "メールアドレス"
       .signup-box
         - if @minimum_password_length
           -# %em

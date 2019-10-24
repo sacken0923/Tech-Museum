@@ -37,54 +37,26 @@
   }
 }
 
-// .carousel-item{
-// height: auto;
-// }
-
-// .carousel-item a {
-// display: block;
-// width: 100%;
-// }
-
-// .carousel-item.show-image {
-// display: block;
-// width:100%;
-// }
-
 .carousel-inner{
   background-color: rgba(0,0,0,0.6);
 }
-// .carousel-inner::before{
-//   background-color: black;
-//   opacity: 0.4;
-// }
-
 
 .top-ranking{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  // centerもいいかも
   margin: 0 150px;
   margin-top: 50px;
 }
 .top-products{
   display: flex;
-  
-  // justify-content: space-between;
   margin: 0 30px;
   margin-top: 50px;
   flex-wrap: wrap;
-  // &__box{
-  //   border-top: red solid 1px; 
-  // }
 }
 
 .top-products__under{
-  // height: 110px;
-  // padding: 16px;
-  // box-sizing: border-box;
-  // text-align: left;
   height: 60px;
-  // border: #ccc solid 1px;
   margin-bottom: 80px;
   background-color: #fff;
 }
